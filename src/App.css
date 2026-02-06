@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1334c6, #3a0370);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.task-container {
+  background: #494646;
+  width: 100%;
+  max-width: 480px;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #f8f41c;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.input-box input:focus {
+  border-color: #3f55be;
+}
+
+.input-box button {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background: #180deb;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.input-box button:hover {
+  background: #434190;
+}
+
+.controls {
+  margin-bottom: 15px;
+}
+
+.controls input {
+  width: 100%;
+  padding: 9px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+}
+
+.filters button {
+  flex: 1;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  background: #e2e8f0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filters button.active {
+  background: #111fa2;
+  color: white;
+}
+
+
+.task-list {
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+
+.task {
+  background: #61aed7;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.task:hover {
+  background: #edf2f7;
+}
+
+.task span {
+  cursor: pointer;
+}
+
+.task.done span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task button {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.empty {
+  text-align: center;
+  color: gray;
+  margin-top: 20px;
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .task-container {
+    padding: 20px;
+  }
+}
